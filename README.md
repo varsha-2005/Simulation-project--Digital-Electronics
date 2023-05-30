@@ -42,7 +42,7 @@ Step 4: Define the T inputs based on the counter value:
 ![Screenshot (122)](https://github.com/varsha-2005/Simulation-project--Digital-Electronics/assets/119288183/2fdeb412-aafa-430c-98f2-9147d78bdb74)
 
 # PROGRAM
-
+```
 Devolped By: Varsha.G
 Reference Number: 212222230166
 
@@ -57,6 +57,8 @@ begin
   a[0]=((~a[3])|(a[0])|(a[3]&~a[2]&~a[1]))^a[0];
 end
 endmodule
+
+```
 
 # Result:
 
