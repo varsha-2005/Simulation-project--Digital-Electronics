@@ -36,8 +36,28 @@ Step 4: Define the T inputs based on the counter value:
 
 ![Screenshot (121)](https://github.com/varsha-2005/Simulation-project--Digital-Electronics/assets/119288183/4a673a0f-5c4c-4279-ac05-ba580a2053b7)
 
+
 # TIMING DIAGRAM
+
+![Screenshot (122)](https://github.com/varsha-2005/Simulation-project--Digital-Electronics/assets/119288183/2fdeb412-aafa-430c-98f2-9147d78bdb74)
 
 # PROGRAM
 
-# REFERENCE
+Devolped By: Varsha.G
+Reference Number: 212222230166
+
+module project (clk,a);
+input clk;
+output reg [3:0]a;
+always@(posedge clk)
+begin
+  a[3]=((a[3]&a[2])|(a[3]&a[0])|(a[3]&a[1])|(a[2]&a[1]&a[0]))^a[3];
+  a[2]=((a[3]&a[2])|(~a[3]&a[0]&a[1]))^a[2];
+  a[1]=((~a[3]&a[0])|(a[3]&a[2]))^a[1];
+  a[0]=((~a[3])|(a[0])|(a[3]&~a[2]&~a[1]))^a[0];
+end
+endmodule
+
+# Result:
+
+Thus the Decade Synchronous Upcounter With T FlipFlop Using Verilog is executed successfully.
